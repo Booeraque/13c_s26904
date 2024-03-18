@@ -3,8 +3,15 @@
 def task1():
     squares = [number * number for number in range(10)]
     return squares
+
+
 # Task 2
 # Functions
+def task2():
+    start = int(input("Enter the start of the range: "))
+    end = int(input("Enter the end of the range: "))
+    squares = [number * number for number in range(start, end + 1)]
+    return squares
 
 
 # Task 3
@@ -33,5 +40,5 @@ def task1():
 
 # Test the function
 if __name__ == "__main__":
-    result = task1()
+    result = task2()
     print(result)
