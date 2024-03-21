@@ -58,6 +58,9 @@ def task5():
 # Created a separate module named squared_generator.py
 
 # Task 7
+# Packages
+
+# Refactored my module using PyCharm into a Package called square_generator
 
 
 # Task 8
