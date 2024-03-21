@@ -26,10 +26,17 @@ class SquareGenerator:
 
     def task3(self):
         squaresList = [number * number for number in range(self.start, self.end + 1)]
-        print(squaresList)
+        return squaresList
 
 
 # Task 4
+# Libraries
+import math
+
+
+def square_root_generator(squaresList):
+    squareRootList = [math.sqrt(number) for number in squaresList]
+    return squareRootList
 
 
 # Task 5
@@ -52,5 +59,7 @@ class SquareGenerator:
 
 # Test the function
 if __name__ == "__main__":
-    sq1 = SquareGenerator()
-    sq1.task3()
+    sg = SquareGenerator()
+    squares = sg.task3()
+    roots = square_root_generator(squares)
+    print(roots)
