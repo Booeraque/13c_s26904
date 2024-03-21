@@ -77,7 +77,16 @@ class CubicGenerator(sq.SquareGenerator):
 
 
 # Task 9
-
+# Function Overriding
+class CubicGenerator(sq.SquareGenerator):
+    def task8(self):
+        try:
+            if self.start > self.end:
+                raise ValueError("Start must be less than end")
+            cubesList = [number ** 3 for number in range(self.start, self.end + 1)]
+            return cubesList
+        except ValueError:
+            print("The start of the range cannot be bigger than the end of it!")
 
 # Task 10
 
