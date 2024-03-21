@@ -40,7 +40,17 @@ def square_root_generator(squaresList):
 
 
 # Task 5
-
+# Exceptions
+def task5():
+    start = int(input("Enter the start of the range: "))
+    end = int(input("Enter the end of the range: "))
+    try:
+        if start > end:
+            raise ValueError("Start must be less than end")
+        squares = [number * number for number in range(start, end + 1)]
+        return squares
+    except ValueError:
+        print("The start of the range cannot be bigger than the end of it!")
 
 # Task 6
 
@@ -59,7 +69,5 @@ def square_root_generator(squaresList):
 
 # Test the function
 if __name__ == "__main__":
-    sg = SquareGenerator()
-    squares = sg.task3()
-    roots = square_root_generator(squares)
-    print(roots)
+    sq = task5()
+    print(sq)
