@@ -13,10 +13,9 @@ def task2():
     squares = [number * number for number in range(start, end + 1)]
     return squares
 
-
-# Task 3
-# Classes
-class SquareGenerator:
+    # Task 3
+    # Classes
+    # class SquareGenerator:
     start = 0
     end = 0
 
@@ -52,6 +51,7 @@ def task5():
     except ValueError:
         print("The start of the range cannot be bigger than the end of it!")
 
+
 # Task 6
 # Modules
 
@@ -62,8 +62,18 @@ def task5():
 
 # Refactored my module using PyCharm into a Package called square_generator
 
-
 # Task 8
+# Inheritance
+import square_generator as sq
+
+
+class CubicGenerator(sq.SquareGenerator):
+    def __init__(self):
+        super().__init__()
+
+    def task8(self):
+        cubesList = [number ** 3 for number in range(self.start, self.end + 1)]
+        return cubesList
 
 
 # Task 9
@@ -74,5 +84,6 @@ def task5():
 
 # Test the function
 if __name__ == "__main__":
-    sq = task5()
-    print(sq)
+    cg = CubicGenerator()
+    cubes = cg.task8()
+    print(cubes)
