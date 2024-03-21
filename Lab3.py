@@ -88,11 +88,23 @@ class CubicGenerator(sq.SquareGenerator):
         except ValueError:
             print("The start of the range cannot be bigger than the end of it!")
 
+
 # Task 10
+# Abstract Elements
+class CubicGenerator(sq.SquareGenerator):
+    def generate_squares(self):
+        try:
+            if self.start > self.end:
+                raise ValueError("Start must be less than end")
+            cubesList = [number ** 3 for number in range(self.start, self.end + 1)]
+            return cubesList
+        except ValueError:
+            print("The start of the range cannot be bigger than the end of it!")
 
 
 # Test the function
 if __name__ == "__main__":
     cg = CubicGenerator()
-    cubes = cg.task8()
+    cubes = cg.generate_squares()
     print(cubes)
+
