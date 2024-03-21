@@ -53,7 +53,9 @@ def task5():
         print("The start of the range cannot be bigger than the end of it!")
 
 # Task 6
+# Modules
 
+# Created a separate module named squared_generator.py
 
 # Task 7
 
